@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
+import { API_URL } from '../services/apiClient';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -15,7 +16,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+      const { data } = await axios.post(`${API_URL}/api/auth/register`, { name, email, password });
       login(data);
       navigate('/');
     } catch (err) {
@@ -33,32 +34,32 @@ const Signup = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-slate-700 font-medium mb-1">Name</label>
-              <input 
-                type="text" 
-                value={name} 
+              <input
+                type="text"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                required 
+                required
               />
             </div>
             <div>
               <label className="block text-slate-700 font-medium mb-1">Email</label>
-              <input 
-                type="email" 
-                value={email} 
+              <input
+                type="email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                required 
+                required
               />
             </div>
             <div>
               <label className="block text-slate-700 font-medium mb-1">Password</label>
-              <input 
-                type="password" 
-                value={password} 
+              <input
+                type="password"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                required 
+                required
               />
             </div>
             <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-95">

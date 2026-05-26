@@ -13,6 +13,7 @@ import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import jsPDF from 'jspdf';
+import { API_URL } from '../services/apiClient';
 import html2canvas from 'html2canvas';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 
@@ -320,7 +321,7 @@ const curatedCityPreviewImages = {
         previewImage: previewImg
       };
       
-      await axios.post('http://localhost:5000/api/itineraries/save', itineraryData);
+      await axios.post(`${API_URL}/api/itineraries/save`, itineraryData);
       setSaved(true);
       setTimeout(() => setSaved(false), 3000);
     } catch (err) {

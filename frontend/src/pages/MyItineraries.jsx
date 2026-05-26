@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import { AuthContext } from '../context/AuthContext';
 import { Calendar, MapPin, Trash2, ArrowRight } from 'lucide-react';
 import { getCityPreviewImage } from '../utils/fallbackImages';
+import { API_URL } from '../services/apiClient';
 
 const MyItineraries = () => {
   const [itineraries, setItineraries] = useState([]);
@@ -20,7 +21,7 @@ const MyItineraries = () => {
 
     const fetchItineraries = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/itineraries/user');
+        const { data } = await axios.get(`${API_URL}/api/itineraries/user`);
         setItineraries(data);
       } catch (error) {
         console.error('Error fetching itineraries', error);
@@ -36,7 +37,7 @@ const MyItineraries = () => {
     e.stopPropagation();
     if (window.confirm('Are you sure you want to delete this itinerary?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/itineraries/${id}`);
+        await axios.delete(`${API_URL}/api/itineraries/${id}`);
         setItineraries(itineraries.filter(it => it._id !== id));
       } catch (error) {
         console.error('Error deleting itinerary', error);
