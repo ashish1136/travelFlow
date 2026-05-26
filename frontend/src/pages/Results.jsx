@@ -204,7 +204,7 @@ const Results = () => {
                             Booking
                           </a>
                           <a
-                            href={`https://www.goibibo.com/hotels/find-hotels-in-${encodeURIComponent(cleanCityName.toLowerCase())}/?q=${encodeURIComponent(hotel.name)}`}
+                            href={`https://www.google.com/search?q=site:goibibo.com+${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex-1 min-w-[70px] bg-orange-500 hover:bg-orange-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-2.5 rounded-xl text-center shadow transition-all duration-200 hover:scale-105 active:scale-95"
@@ -212,7 +212,7 @@ const Results = () => {
                             Goibibo
                           </a>
                           <a
-                            href={`https://www.oyorooms.com/search?location=${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
+                            href={`https://www.google.com/search?q=site:oyorooms.com+${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex-1 min-w-[70px] bg-red-600 hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-wider px-3 py-2.5 rounded-xl text-center shadow transition-all duration-200 hover:scale-105 active:scale-95"
@@ -220,7 +220,7 @@ const Results = () => {
                             OYO
                           </a>
                           <a
-                            href={`https://www.makemytrip.com/hotels/hotel-listing/?searchText=${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
+                            href={`https://www.google.com/search?q=site:makemytrip.com+${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex-1 min-w-[70px] bg-sky-500 hover:bg-sky-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-2.5 rounded-xl text-center shadow transition-all duration-200 hover:scale-105 active:scale-95"
@@ -228,7 +228,6 @@ const Results = () => {
                             MMT
                           </a>
                         </div>
-                      </div>
                     </div>
                   ))}
                 </div>

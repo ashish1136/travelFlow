@@ -999,7 +999,7 @@ const curatedCityPreviewImages = {
                                                                         Booking
                                                                     </a>
                                                                     <a 
-                                                                        href={`https://www.goibibo.com/hotels/find-hotels-in-${encodeURIComponent(cleanCityName.toLowerCase())}/?q=${encodeURIComponent(h.name)}`}
+                                                                        href={`https://www.google.com/search?q=site:goibibo.com+${encodeURIComponent(h.name + ' ' + cleanCityName)}`}
                                                                         target="_blank" 
                                                                         rel="noopener noreferrer"
                                                                         className="inline-block text-[9px] font-bold bg-orange-500 text-white px-2 py-1 rounded-lg hover:bg-orange-600 transition-all shadow-sm"
@@ -1007,7 +1007,7 @@ const curatedCityPreviewImages = {
                                                                         Goibibo
                                                                     </a>
                                                                     <a 
-                                                                        href={`https://www.oyorooms.com/search?location=${encodeURIComponent(h.name + ' ' + cleanCityName)}`}
+                                                                        href={`https://www.google.com/search?q=site:oyorooms.com+${encodeURIComponent(h.name + ' ' + cleanCityName)}`}
                                                                         target="_blank" 
                                                                         rel="noopener noreferrer"
                                                                         className="inline-block text-[9px] font-bold bg-red-600 text-white px-2 py-1 rounded-lg hover:bg-red-700 transition-all shadow-sm"
@@ -1015,7 +1015,7 @@ const curatedCityPreviewImages = {
                                                                         OYO
                                                                     </a>
                                                                     <a 
-                                                                        href={`https://www.makemytrip.com/hotels/hotel-listing/?searchText=${encodeURIComponent(h.name + ' ' + cleanCityName)}`}
+                                                                        href={`https://www.google.com/search?q=site:makemytrip.com+${encodeURIComponent(h.name + ' ' + cleanCityName)}`}
                                                                         target="_blank" 
                                                                         rel="noopener noreferrer"
                                                                         className="inline-block text-[9px] font-bold bg-sky-500 text-white px-2 py-1 rounded-lg hover:bg-sky-600 transition-all shadow-sm"
@@ -1081,7 +1081,7 @@ const curatedCityPreviewImages = {
                                 Booking
                               </a>
                               <a 
-                                href={`https://www.goibibo.com/hotels/find-hotels-in-${encodeURIComponent(cleanCityName.toLowerCase())}/?q=${encodeURIComponent(hotel.name)}`}
+                                href={`https://www.google.com/search?q=site:goibibo.com+${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="flex-1 bg-orange-500 hover:bg-orange-600 text-white text-[9px] font-black uppercase py-1.5 rounded-lg text-center transition shadow-sm hover:scale-105 active:scale-95"
@@ -1089,7 +1089,7 @@ const curatedCityPreviewImages = {
                                 Goibibo
                               </a>
                               <a 
-                                href={`https://www.oyorooms.com/search?location=${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
+                                href={`https://www.google.com/search?q=site:oyorooms.com+${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="flex-1 bg-red-600 hover:bg-red-700 text-white text-[9px] font-black uppercase py-1.5 rounded-lg text-center transition shadow-sm hover:scale-105 active:scale-95"
@@ -1097,7 +1097,7 @@ const curatedCityPreviewImages = {
                                 OYO
                               </a>
                               <a 
-                                href={`https://www.makemytrip.com/hotels/hotel-listing/?searchText=${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
+                                href={`https://www.google.com/search?q=site:makemytrip.com+${encodeURIComponent(hotel.name + ' ' + cleanCityName)}`}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="flex-1 bg-sky-500 hover:bg-sky-600 text-white text-[9px] font-black uppercase py-1.5 rounded-lg text-center transition shadow-sm hover:scale-105 active:scale-95"
