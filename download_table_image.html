@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Progress Report</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 40px;
+        background-color: #f0f2f5;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 1300px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #1a237e;
+        font-size: 24px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #c8ced3;
+        padding: 14px;
+        vertical-align: middle;
+    }
+    th {
+        background-color: #f8f9fa;
+        color: #2c3e50;
+        text-align: center;
+        font-weight: 600;
+    }
+    td {
+        color: #444;
+    }
+    tr:nth-child(even) {
+        background-color: #fdfdfd;
+    }
+    .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0,123,255,0.2);
+        transition: background-color 0.3s;
+        margin-bottom: 20px;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    .week-col {
+        font-weight: bold;
+        text-align: center;
+        background-color: #f4f6f9;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<button class="btn" onclick="downloadImage()">⬇️ Click Here to Download Image</button>
+
+<div class="container" id="report-table">
+    <h2>Weekly progress report of project work</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 8%;">S no.</th>
+                <th style="width: 20%;">Tasks performed as per objectives of the Project</th>
+                <th style="width: 18%;">Contribution of team leader<br>(Name & Id)</th>
+                <th style="width: 18%;">Contribution of team member 2<br>(Name & Id)</th>
+                <th style="width: 18%;">Contribution of team member 3<br>(Name & Id)</th>
+                <th style="width: 18%;">Contribution of team member 4<br>(Name & Id)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Week 1 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 1</td>
+                <td><strong>Class 1: Project Initiation</strong><br>Defined project scope, core objectives, and target audience.</td>
+                <td>Led discussion on core features; finalized requirement doc.</td>
+                <td>Researched UI frameworks and competitor apps.</td>
+                <td>Researched backend technologies (Node.js/Express).</td>
+                <td>Drafted initial project timeline and milestones.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Tech Stack Selection</strong><br>Finalized React for frontend, Node for backend, MongoDB.</td>
+                <td>Approved tech stack; set up GitHub repository.</td>
+                <td>Set up the initial React application boilerplate.</td>
+                <td>Installed and configured local database environment.</td>
+                <td>Created the initial folder structure and Git branches.</td>
+            </tr>
+            <!-- Week 2 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 2</td>
+                <td><strong>Class 1: UI/UX Wireframing</strong><br>Designed mockups for the dashboard and itinerary view.</td>
+                <td>Reviewed wireframes for user flow logic.</td>
+                <td>Designed the main itinerary display interface mockups.</td>
+                <td>Outlined API endpoint requirements based on UI.</td>
+                <td>Created wireframes for login and preference screens.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Frontend Foundation</strong><br>Began translating wireframes into React components.</td>
+                <td>Set up project routing (React Router).</td>
+                <td>Built the navigation bar and global layout shell.</td>
+                <td>Created placeholder components for future API data.</td>
+                <td>Implemented basic CSS/styling themes.</td>
+            </tr>
+            <!-- Week 3 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 3</td>
+                <td><strong>Class 1: Backend Setup</strong><br>Initialized Node.js server and connected to MongoDB.</td>
+                <td>Configured server environment variables securely.</td>
+                <td>Continued styling frontend components.</td>
+                <td>Wrote the database connection logic (Mongoose).</td>
+                <td>Tested basic API ping endpoints via Postman.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Database Schemas</strong><br>Created schemas for Users, Trips, and Preferences.</td>
+                <td>Reviewed and finalized data relationships.</td>
+                <td>Linked frontend forms to placeholder states.</td>
+                <td>Coded the User and Trip Mongoose models.</td>
+                <td>Documented the database schema structure.</td>
+            </tr>
+            <!-- Week 4 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 4</td>
+                <td><strong>Class 1: Auth Backend</strong><br>Developed JWT-based user registration and login.</td>
+                <td>Wrote the JWT token generation logic.</td>
+                <td>Created the React Login and Registration forms.</td>
+                <td>Built the password hashing (Bcrypt) and auth routes.</td>
+                <td>Wrote Postman tests for the authentication APIs.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Auth Frontend</strong><br>Integrated login forms with the backend auth APIs.</td>
+                <td>Handled route protection (Private Routes) in React.</td>
+                <td>Managed user state and token storage in browser.</td>
+                <td>Debugged CORS and token passing issues.</td>
+                <td>Tested login flow with various edge cases.</td>
+            </tr>
+            <!-- Week 5 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 5</td>
+                <td><strong>Class 1: Mapping API Research</strong><br>Evaluated OpenTripMap and Geoapify for location data.</td>
+                <td>Tested OpenTripMap API endpoints for geocoding.</td>
+                <td>Researched Leaflet.js for map rendering.</td>
+                <td>Tested Geoapify endpoints for place details.</td>
+                <td>Compared API rate limits and data accuracy.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Geocoding Implementation</strong><br>Converting user city input into precise coordinates.</td>
+                <td>Built the backend geocoding service function.</td>
+                <td>Added the search bar UI for city input.</td>
+                <td>Connected search bar to the backend geocoding API.</td>
+                <td>Handled "City not found" error states in UI.</td>
+            </tr>
+            <!-- Week 6 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 6</td>
+                <td><strong>Class 1: Interactive Map Setup</strong><br>Integrating Leaflet map into the React frontend.</td>
+                <td>Coordinated map state with search results.</td>
+                <td>Installed Leaflet and rendered the base map component.</td>
+                <td>Fetched preliminary coordinates to pass to the map.</td>
+                <td>Ensured map UI was responsive on mobile.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Plotting Markers</strong><br>Displaying accurate map markers for destinations.</td>
+                <td>Updated backend to send formatted location data.</td>
+                <td>Wrote logic to plot custom markers on Leaflet map.</td>
+                <td>Structured the JSON response for map consumption.</td>
+                <td>Debugged marker positioning errors.</td>
+            </tr>
+            <!-- Week 7 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 7</td>
+                <td><strong>Class 1: Core Itinerary Logic</strong><br>Fetching attractions, hotels, and restaurants.</td>
+                <td>Built the primary attraction-fetching algorithm.</td>
+                <td>Created UI cards to display fetched places.</td>
+                <td>Integrated OpenTripMap API for categorised queries.</td>
+                <td>Verified data accuracy of returned places.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Data Filtering</strong><br>Sorting places for cultural sites and essentials.</td>
+                <td>Implemented logic to guarantee 10-12 diverse locations.</td>
+                <td>Built filter UI buttons (Attractions, Food, Hotels).</td>
+                <td>Wrote backend filters to remove irrelevant data.</td>
+                <td>Tested filtering logic against multiple cities.</td>
+            </tr>
+            <!-- Week 8 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 8</td>
+                <td><strong>Class 1: Pacing Feature Logic</strong><br>Designing Relaxed, Balanced, Packed settings.</td>
+                <td>Wrote the algorithm for daily activity distribution.</td>
+                <td>Added pacing selection dropdowns to the UI.</td>
+                <td>Updated Trip schema to save pacing preference.</td>
+                <td>Documented the pacing algorithm rules.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Pacing Integration</strong><br>Adjusting itinerary length based on user selection.</td>
+                <td>Connected frontend selection to the backend engine.</td>
+                <td>Designed the Day 1, Day 2 UI separation.</td>
+                <td>Handled the data slicing based on pacing limits.</td>
+                <td>Tested itinerary generation under all three settings.</td>
+            </tr>
+            <!-- Week 9 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 9</td>
+                <td><strong>Class 1: Visual Enhancements</strong><br>Static image rotation for destination cards.</td>
+                <td>Created an array of fallback high-quality images.</td>
+                <td>Built the image rotation component for the UI.</td>
+                <td>Removed unstable external image API links.</td>
+                <td>Optimised image assets for faster loading.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: City Essentials</strong><br>Developing the top-rated hotels/restaurants UI.</td>
+                <td>Defined logic for pulling top-rated essentials.</td>
+                <td>Built the "City Essentials" UI sidebar/section.</td>
+                <td>Queried OpenTripMap for high-rated stays.</td>
+                <td>Ensured essentials data matched the map markers.</td>
+            </tr>
+            <!-- Week 10 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 10</td>
+                <td><strong>Class 1: Weather API</strong><br>Fetching 5-day forecasts for the destination.</td>
+                <td>Integrated external Weather API into backend.</td>
+                <td>Designed the layout for the 5-day weather widget.</td>
+                <td>Wrote the backend route to serve weather data.</td>
+                <td>Tested weather fetching for various global cities.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Weather Widget</strong><br>Adding the forecast to the itinerary dashboard.</td>
+                <td>Linked weather data to the trip dates.</td>
+                <td>Displayed weather icons and temps in the widget.</td>
+                <td>Handled loading states for the weather widget.</td>
+                <td>Ensured weather UI aligned with overall theme.</td>
+            </tr>
+            <!-- Week 11 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 11</td>
+                <td><strong>Class 1: Activity Swapping (Backend)</strong><br>Logic to fetch alternative places for a time slot.</td>
+                <td>Built endpoint to fetch alternative location.</td>
+                <td>Added the "Swap" button to the activity cards.</td>
+                <td>Handled database update when an activity is swapped.</td>
+                <td>Tested the swapping logic to prevent duplicates.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Activity Swapping (Frontend)</strong><br>UI/UX for replacing an unwanted activity.</td>
+                <td>Coordinated state update without page reload.</td>
+                <td>Implemented smooth UI transition during a swap.</td>
+                <td>Connected frontend swap button to the endpoint.</td>
+                <td>Handled error states if no alternatives exist.</td>
+            </tr>
+            <!-- Week 12 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 12</td>
+                <td><strong>Class 1: Transportation Links</strong><br>Integrating Uber deep-links for ride-hailing.</td>
+                <td>Researched Uber universal deep-link structure.</td>
+                <td>Added "Book Ride" buttons on the itinerary view.</td>
+                <td>Wrote logic to inject coordinates into Uber URL.</td>
+                <td>Tested deep-links on mobile device simulators.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: System Consolidation</strong><br>Removing legacy APIs to rely solely on OpenTripMap.</td>
+                <td>Audited codebase for old Foursquare API calls.</td>
+                <td>Removed legacy code and updated UI references.</td>
+                <td>Cleaned up unused environment variables.</td>
+                <td>Verified system stability after code removal.</td>
+            </tr>
+            <!-- Week 13 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 13</td>
+                <td><strong>Class 1: Code Refactoring</strong><br>Cleaning up React components and Express controllers.</td>
+                <td>Reviewed and merged outstanding pull requests.</td>
+                <td>Refactored large UI components into smaller parts.</td>
+                <td>Optimised database queries for faster loading.</td>
+                <td>Standardised code formatting across the project.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Bug Fixing</strong><br>Resolving map rendering bugs and UI glitches.</td>
+                <td>Investigated Leaflet rendering issues on load.</td>
+                <td>Fixed CSS overlap issues on mobile view.</td>
+                <td>Resolved JWT token expiration bugs.</td>
+                <td>Performed cross-browser compatibility checks.</td>
+            </tr>
+            <!-- Week 14 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 14</td>
+                <td><strong>Class 1: End-to-End Testing</strong><br>Simulating full user journeys.</td>
+                <td>Led the testing session; tracked bugs.</td>
+                <td>Tested the frontend UI responsiveness.</td>
+                <td>Monitored backend server logs for hidden errors.</td>
+                <td>Executed full trip generation tests (A to Z).</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Edge Case Handling</strong><br>Fixing missing API keys and empty search results.</td>
+                <td>Added robust error boundaries to React.</td>
+                <td>Designed friendly error messages for the user.</td>
+                <td>Implemented backend safeguards against API limits.</td>
+                <td>Tested system behavior with invalid city inputs.</td>
+            </tr>
+            <!-- Week 15 -->
+            <tr>
+                <td class="week-col" rowspan="2">Week 15</td>
+                <td><strong>Class 1: Final Documentation</strong><br>Writing the project report and code snippets.</td>
+                <td>Wrote System Architecture & Methodology sections.</td>
+                <td>Documented the Frontend UI structure & styling.</td>
+                <td>Documented the Database Schema & API endpoints.</td>
+                <td>Compiled the weekly progress report & testing logs.</td>
+            </tr>
+            <tr>
+                <td><strong>Class 2: Deployment & Presentation</strong><br>Deploying the application to production.</td>
+                <td>Managed the deployment to Vercel/Render.</td>
+                <td>Created the presentation slides.</td>
+                <td>Configured production database (MongoDB Atlas).</td>
+                <td>Prepared the live demo script.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function downloadImage() {
+        const btn = document.querySelector('.btn');
+        btn.innerHTML = '⏳ Generating Image... Please wait';
+        btn.style.backgroundColor = '#6c757d';
+        
+        const tableContainer = document.getElementById('report-table');
+        
+        setTimeout(() => {
+            html2canvas(tableContainer, {
+                scale: 2, 
+                backgroundColor: "#ffffff",
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Weekly_Progress_Report.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                
+                btn.innerHTML = '✅ Download Complete!';
+                btn.style.backgroundColor = '#28a745';
+                
+                setTimeout(() => {
+                    btn.innerHTML = '⬇️ Click Here to Download Image';
+                    btn.style.backgroundColor = '#007bff';
+                }, 3000);
+            }).catch(err => {
+                console.error("Error generating image: ", err);
+                alert("Failed to generate image. You can try zooming out and taking a screenshot.");
+                btn.innerHTML = '⬇️ Click Here to Download Image';
+                btn.style.backgroundColor = '#007bff';
+            });
+        }, 500);
+    }
+</script>
+
+</body>
+</html>
