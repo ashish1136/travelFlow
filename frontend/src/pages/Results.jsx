@@ -228,6 +228,7 @@ const Results = () => {
                             MMT
                           </a>
                         </div>
+                      </div>
                     </div>
                   ))}
                 </div>
